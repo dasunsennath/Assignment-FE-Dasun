@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+    app:
+      container_name: weather_app
+      image: weather-app-react
+      build:
+        context: .
+      ports:
+        - "3000:3000"

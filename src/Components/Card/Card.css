@@ -1,0 +1,65 @@
+
+
+.bg-blue{
+  background-color: #388ee7;
+}
+
+.bg-black-light{
+  background-color: #383b47;
+}
+
+.fs-6{
+  font-size: .875rem !important;
+}
+
+.fs-7{
+  font-size: .75rem !important;
+}
+
+.fw-bold{
+  font-weight: bold !important;
+}
+
+.bg-cloud{
+    background-image: url("../../img/cloud\ bg.png");
+}
+
+.h-40{
+  height: 40px !important;
+}
+
+@media screen and (max-width: 500px) {
+ .fs-3{
+   font-size: calc(1rem + .6vw)!important
+ }
+}
+    
+.close{
+ position: relative;
+ left: 0.5rem;
+ bottom: 0.5rem;
+}
+
+.bg-orange{
+  background-color:  #de944e;
+}
+
+.bg-green{
+  background-color: #40b681;
+}
+
+.bg-red{
+  background-color:  #9c3a3a ;
+}
+
+.bg-purple{
+  background-color: #6249cc;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.bg-dark{
+  background-color: #383b47 !important;
+}

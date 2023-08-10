@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1248991,
+        "dt": 1691568552,
+        "time": "1:39pm",
+        "date": "Aug 9",
+        "name": "Colombo",
+        "country": "LK",
+        "temp": 30.97,
+        "temp_min": 30.97,
+        "temp_max": 30.97,
+        "description": "overcast clouds"
+    },
+    {
+        "id": 1850147,
+        "dt": 1691568561,
+        "time": "1:39pm",
+        "date": "Aug 9",
+        "name": "Tokyo",
+        "country": "JP",
+        "temp": 28.45,
+        "temp_min": 26.92,
+        "temp_max": 29.24,
+        "description": "light intensity shower rain"
+    },
+    {
+        "id": 2644210,
+        "dt": 1691568566,
+        "time": "1:39pm",
+        "date": "Aug 9",
+        "name": "Liverpool",
+        "country": "GB",
+        "temp": 15.8,
+        "temp_min": 13.3,
+        "temp_max": 18.12,
+        "description": "scattered clouds"
+    },
+    {
+        "id": 2988507,
+        "dt": 1691568563,
+        "time": "1:39pm",
+        "date": "Aug 9",
+        "name": "Paris",
+        "country": "FR",
+        "temp": 17.97,
+        "temp_min": 16.88,
+        "temp_max": 19.01,
+        "description": "overcast clouds"
+    },
+    {
+        "id": 2147714,
+        "dt": 1691568544,
+        "time": "1:39pm",
+        "date": "Aug 9",
+        "name": "Sydney",
+        "country": "AU",
+        "temp": 16.08,
+        "temp_min": 14.66,
+        "temp_max": 17.61,
+        "description": "clear sky"
+    },
+    {
+        "id": 4930956,
+        "dt": 1691568991,
+        "time": "1:46pm",
+        "date": "Aug 9",
+        "name": "Boston",
+        "country": "US",
+        "temp": 20.7,
+        "temp_min": 19.35,
+        "temp_max": 21.64,
+        "description": "few clouds"
+    },
+    {
+        "id": 1796236,
+        "dt": 1691568552,
+        "time": "1:39pm",
+        "date": "Aug 9",
+        "name": "Shanghai",
+        "country": "CN",
+        "temp": 33.3,
+        "temp_min": 31.04,
+        "temp_max": 35.52,
+        "description": "broken clouds"
+    },
+    {
+        "id": 3143244,
+        "dt": 1691568571,
+        "time": "1:39pm",
+        "date": "Aug 9",
+        "name": "Oslo",
+        "country": "NO",
+        "temp": 12.99,
+        "temp_min": 12.1,
+        "temp_max": 13.4,
+        "description": "overcast clouds"
+    }
+]

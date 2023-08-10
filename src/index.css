@@ -1,0 +1,22 @@
+@import url('https://fonts.cdnfonts.com/css/open-sans');
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   min-height: 100vh;
+}
+
+code {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#root{
+  height: 100vh;
+}
+
+.vr{
+  color: white;
+  opacity: 100;
+}
