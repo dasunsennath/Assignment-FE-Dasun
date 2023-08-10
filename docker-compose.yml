@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3.8'
 
 services:
     app:
@@ -6,5 +6,9 @@ services:
       image: weather-app-react
       build:
         context: .
+        dockerfile: Dockerfile
+      volumes:
+        - '.:/app'
+        - '/app/node_modules'
       ports:
         - "3000:3000"
