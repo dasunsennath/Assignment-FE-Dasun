@@ -3,7 +3,7 @@ version: '3.8'
 services:
     app:
       container_name: weather_app
-      image: weather-app-react
+      image: weather_app
       build:
         context: .
         dockerfile: Dockerfile
