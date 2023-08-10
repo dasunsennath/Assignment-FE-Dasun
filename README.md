@@ -1,4 +1,4 @@
-# Project Name
+# Weather APP
 
 This project is a React application that utilizes a weather API to display weather information.
 
