@@ -23,24 +23,24 @@ const WeatherDetail = () => {
   }
   useEffect(() => {
     if(data.description === 'Clear Sky'){
-      setIcon(<BsSun  size={80} />);
+      setIcon(<BsSun  className="icon-size" />);
     }else if(data.description === 'Few Clouds'){
-      setIcon(<BsCloudDrizzle  size={80} />);
+      setIcon(<BsCloudDrizzle  className="icon-size"  />);
     
     }else if(data.description === 'Scattered Clouds'){
-      setIcon(<BsCloudy  size={80} />);
+      setIcon(<BsCloudy  className="icon-size"  />);
      
     }else if(data.description === 'Broken Clouds'){
-      setIcon(<BsCloudy  size={80} />);
+      setIcon(<BsCloudy  className="icon-size"  />);
       
     }else if(data.description === 'Overcast Clouds'){
-      setIcon(<BsCloudy  size={80} />);
+      setIcon(<BsCloudy  className="icon-size"  />);
       
     }else if(data.description === 'Mist'){
-      setIcon(<BsJustify  size={80} />);
+      setIcon(<BsJustify  className="icon-size"  />);
     }
     else{
-      setIcon(<BsSun  size={80} />);
+      setIcon(<BsSun  className="icon-size"  />);
     }
   
     data.description = captipitalizeWords(data.description);
@@ -62,15 +62,15 @@ const WeatherDetail = () => {
               <div className="col-5 text-white d-flex flex-column align-items-center text-center gap-2">
               
                      {icon} 
-                    <span>{data.description}</span>
+                    <span className="fs-5">{data.description}</span>
               </div>
               <div className="col-1 text-center">
               <div className="vr h-100"></div>
               </div>
               <div className="col-6  text-white d-flex flex-column text-center">
                     <p className="fw-bolder fs-1">{data.temp}&deg;C</p>
-                    <h6>Temp Min: {data.temp_min}&deg;C</h6>
-                    <h6>Temp Max: {data.temp_max}&deg;C</h6>
+                    <div className="fs-6 fw-bold">Temp Min: {data.temp_min}&deg;C</div>
+                    <div className="fs-6 fw-bold">Temp Max: {data.temp_max}&deg;C</div>
               </div>
               </div>
 

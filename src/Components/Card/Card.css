@@ -28,11 +28,7 @@
   height: 40px !important;
 }
 
-@media screen and (max-width: 500px) {
- .fs-3{
-   font-size: calc(1rem + .6vw)!important
- }
-}
+
     
 .close{
  position: relative;
@@ -63,3 +59,45 @@
 .bg-dark{
   background-color: #383b47 !important;
 }
+
+@media screen and (max-width: 500px) {
+  .fs-3{
+    font-size: calc(1rem + .6vw)!important
+  }
+ }
+
+ @media screen and (max-width: 370px) {
+  .fs-3{
+    font-size: calc(1rem + .6vw)!important
+  }
+  .fs-5{
+    font-size: 1rem !important
+  }
+
+  .fs-6 {
+    font-size: .62rem !important;
+   }
+   .fs-7 {
+    font-size: .6rem !important;
+   }
+   
+ }
+
+  @media (min-width: 990px) and (max-width: 1200px) {
+    .fs-2{
+      font-size: calc(1.2rem + .6vw)!important
+    }
+    .fs-3{
+      font-size: calc(1rem + .6vw)!important
+    }
+    .fs-5{
+      font-size: 1rem !important
+    }
+  
+    .fs-6 {
+      font-size: .7rem !important;
+    }
+    .fs-7 {
+      font-size: .65rem !important;
+    }
+  }

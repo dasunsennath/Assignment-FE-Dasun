@@ -5,3 +5,30 @@
 .fw-bolder{
    font-weight:  bolder !important;
 }
+.icon-size
+   {
+      font-size: 5rem !important;
+   }
+@media screen and (max-width: 500px) {
+   .fs-5{
+     font-size:  0.8rem !important
+   }
+
+   .icon-size
+   {
+      font-size: 5rem !important;
+   }
+  }
+
+  @media screen and (max-width: 370px) {
+   .icon-size
+   {
+      font-size: 4rem !important;
+   }
+
+   .fs-5{
+      font-size:  0.7rem !important
+    }
+
+  }
+ 
