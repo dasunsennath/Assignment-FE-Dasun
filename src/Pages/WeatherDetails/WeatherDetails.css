@@ -1,0 +1,41 @@
+.h1-100 {
+  min-height: 74vh;
+}
+.fw-bolder {
+  font-weight: bolder !important;
+}
+.icon-size {
+  font-size: 4.5rem !important;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.foot {
+  width: 75%;
+}
+
+@media screen and (max-width: 500px) {
+  .fs-5 {
+    font-size: 0.8rem !important;
+  }
+
+  .icon-size {
+    font-size: 4rem !important;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .icon-size {
+    font-size: 3.5rem !important;
+  }
+
+  .fs-5 {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .foot {
+    width: 100%;
+  }
+}

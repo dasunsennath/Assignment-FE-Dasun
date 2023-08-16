@@ -37,7 +37,7 @@
   }
 }
 
-.footer{
+.footer {
   background-color: #383b47;
   min-height: 8vh;
   text-align: center;
@@ -45,19 +45,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-
 }
 
-.text-gary{
+.text-gary {
   color: #adb5bd;
 }
 
-.main{
-  background-image: url("./img/bg-home.svg");
+.main {
+  background-image: url("./Assets/BG/bg-home.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100%;
-
 }

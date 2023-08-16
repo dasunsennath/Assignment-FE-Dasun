@@ -1,103 +1,121 @@
-
-
-.bg-blue{
+.bg-blue {
   background-color: #388ee7;
 }
 
-.bg-black-light{
+.bg-black-light {
   background-color: #383b47;
 }
 
-.fs-6{
-  font-size: .875rem !important;
+.fs-6 {
+  font-size: 0.875rem !important;
 }
 
-.fs-7{
-  font-size: .75rem !important;
+.fs-7 {
+  font-size: 0.75rem !important;
 }
 
-.fw-bold{
+.fs-8 {
+  font-size: 0.54rem !important;
+}
+
+.fw-bold {
   font-weight: bold !important;
 }
 
-.bg-cloud{
-    background-image: url("../../img/cloud\ bg.png");
+.bg-cloud {
+  background-image: url("../../Assets/BG//cloud\ bg.png");
 }
 
-.h-40{
+.h-40 {
   height: 40px !important;
 }
 
-
-    
-.close{
- position: relative;
- left: 0.5rem;
- bottom: 0.5rem;
+.close {
+  position: relative;
+  left: 0.5rem;
+  bottom: 0.5rem;
 }
 
-.bg-orange{
-  background-color:  #de944e;
+.bg-orange {
+  background-color: #de944e;
 }
 
-.bg-green{
+.bg-green {
   background-color: #40b681;
 }
 
-.bg-red{
-  background-color:  #9c3a3a ;
+.bg-red {
+  background-color: #9c3a3a;
 }
 
-.bg-purple{
+.bg-purple {
   background-color: #6249cc;
 }
 
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
 
-.bg-dark{
+.bg-dark {
   background-color: #383b47 !important;
 }
 
-@media screen and (max-width: 500px) {
-  .fs-3{
-    font-size: calc(1rem + .6vw)!important
-  }
- }
+.text-gray {
+  color: #575757 !important;
+}
 
- @media screen and (max-width: 370px) {
-  .fs-3{
-    font-size: calc(1rem + .6vw)!important
+@media screen and (max-width: 500px) {
+  .fs-3 {
+    font-size: calc(1rem + 0.6vw) !important;
   }
-  .fs-5{
-    font-size: 1rem !important
+  .fs-8 {
+    font-size: 0.4rem !important;
+  }
+  .fs-6 {
+    font-size: 0.4rem !important;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .fs-3 {
+    font-size: calc(1rem + 0.6vw) !important;
+  }
+  .fs-5 {
+    font-size: 1rem !important;
   }
 
   .fs-6 {
-    font-size: .62rem !important;
-   }
-   .fs-7 {
-    font-size: .6rem !important;
-   }
-   
- }
-
-  @media (min-width: 990px) and (max-width: 1200px) {
-    .fs-2{
-      font-size: calc(1.2rem + .6vw)!important
-    }
-    .fs-3{
-      font-size: calc(1rem + .6vw)!important
-    }
-    .fs-5{
-      font-size: 1rem !important
-    }
-  
-    .fs-6 {
-      font-size: .7rem !important;
-    }
-    .fs-7 {
-      font-size: .65rem !important;
-    }
+    font-size: 0.4rem !important;
   }
+  .fs-7 {
+    font-size: 0.6rem !important;
+  }
+}
+
+@media (min-width: 990px) and (max-width: 1200px) {
+  .fs-2 {
+    font-size: calc(1.2rem + 0.6vw) !important;
+  }
+  .fs-3 {
+    font-size: calc(1rem + 0.6vw) !important;
+  }
+  .fs-5 {
+    font-size: 1rem !important;
+  }
+
+  .fs-6 {
+    font-size: 0.7rem !important;
+  }
+  .fs-7 {
+    font-size: 0.65rem !important;
+  }
+}
+
+@media (min-width: 500px) {
+  .fs-6 {
+    font-size: 0.7rem !important;
+  }
+  .fs-7 {
+    font-size: 0.65rem !important;
+  }
+}

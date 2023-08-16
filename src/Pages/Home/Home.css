@@ -1,0 +1,13 @@
+.home-bg {
+  background-image: url("../../Assets/BG/bg-home.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 300vw;
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
