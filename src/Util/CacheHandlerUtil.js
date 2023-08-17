@@ -26,13 +26,6 @@ const FetchingData = async () => {
 
 export const GetWeatherDataByCache = async () => {
   let cityWeather = GetCacheData(WEATHER_COOKIE);
-  if (
-    cityWeather === undefined ||
-    cityWeather === null ||
-    cityWeather.length === 0
-  ) {
-    return GetWeatherDataByAPI();
-  }
   cityWeather = JSON.parse(cityWeather);
   return cityWeather;
 };
@@ -42,4 +35,11 @@ export const GetWeatherDataByAPI = async () => {
   SetCacheData(WEATHER_COOKIE, JSON.stringify(feted_data), CACHE_EXPIRATION);
   SetCacheData(CACHE_TIME_KEY, Date.now());
   return feted_data;
+};
+
+export const GetWeatherData = async (isfetching) => {
+  if (isfetching) {
+    return await GetWeatherDataByAPI();
+  }
+  return await GetWeatherDataByCache();
 };
