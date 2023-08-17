@@ -13,7 +13,7 @@ function Card({ WetherDetails, color }) {
       WetherDetails,
       color,
     };
-    navigate("weather", { state: share });
+    navigate(`weather`, { state: share });
   };
 
   return (
@@ -98,8 +98,8 @@ function Card({ WetherDetails, color }) {
               </div>
             </div>
             <div className="col-sm-4  col-4 text-center text-white border-end border-start border-secondary ">
-              <CiLocationArrow1 size={22} />
-              <div className=" fs-8 mt-2">
+              <div className="fs-5"><CiLocationArrow1  /></div> 
+              <div className=" fs-8 mt">
                 {WetherDetails.wind_speed}
                 {UnitConstant.WIND_SPEED} {WetherDetails.wind_deg}{" "}
                 {UnitConstant.WIND_DEG}

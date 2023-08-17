@@ -23,13 +23,14 @@ function Home() {
   const fetchData = async () => {
     setIsLoaded(true);
     let availableTime = CACHE_EXPIRATION;
-    let lastFetched =
-      GetCacheData(CACHE_TIME_KEY) || Date.now() + CACHE_EXPIRATION;
+    let lastFetched =GetCacheData(CACHE_TIME_KEY) || Date.now() + CACHE_EXPIRATION;
     try {
-      if (!WetherData || Date.now() - lastFetched > CACHE_EXPIRATION) {
+      if (lastFetched && Date.now() - lastFetched > CACHE_EXPIRATION) {
+        console.log("fetching data from API");
         setWetherData(await GetWeatherDataByAPI());
         availableTime = CACHE_EXPIRATION - (Date.now() - lastFetched);
       } else {
+        console.log("fetching data from cache");
         setWetherData(await GetWeatherDataByCache());
       }
       setIsLoaded(false);

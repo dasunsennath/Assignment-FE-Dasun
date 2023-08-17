@@ -99,8 +99,8 @@ const WeatherDetail = () => {
                     </div>
                   </div>
                   <div className=" col-4 col-sm-4 text-center text-white border-end border-start border-secondary">
-                    <CiLocationArrow1 size={22} />
-                    <div className=" fs-footer mt-2">
+                    <div className="fs-3"><CiLocationArrow1  /></div>  
+                    <div className=" fs-footer">
                       {WetherDetails.wind_speed}
                       {UnitConstant.WIND_SPEED} {WetherDetails.wind_deg}{" "}
                       {UnitConstant.WIND_DEG}
