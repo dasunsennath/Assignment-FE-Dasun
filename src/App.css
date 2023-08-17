@@ -52,9 +52,10 @@
 }
 
 .main {
-  background-image: url("./Assets/BG/bg-home.svg");
+  background-image: url("./Assets/BG/bg2.png");
   background-size: cover;
+  -webkit-background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100%;
+  min-height: 100vh;
+  display: block;
 }

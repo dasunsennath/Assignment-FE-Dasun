@@ -1,12 +1,12 @@
 import axios from "axios";
-import { API_KEY, WEATHER_API_ENDPOINT } from "../Constant/APIConstant";
+import { API_KEY, WEATHER_API_ENDPOINT, UNITS } from "../Constant/APIConstant";
 
 export const getCityWeather = async (city) => {
   console.log("*************** API Called ******************");
   const response = await axios.get(WEATHER_API_ENDPOINT, {
     params: {
       id: city,
-      units: "metric",
+      units: UNITS,
       APPID: API_KEY,
     },
   });

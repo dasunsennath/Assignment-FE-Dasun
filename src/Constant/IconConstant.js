@@ -19,3 +19,5 @@ export const WEATHER_ICON_MAPPINGS = {
   rain: ICONS.BsCloudDrizzle,
   "shower rain": ICONS.BsCloudDrizzle,
 };
+
+export const COLORS=["bg-blue", "bg-green", "bg-red", "bg-purple", "bg-orange"];

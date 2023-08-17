@@ -1,53 +1,47 @@
 import Input from "../../Components/Input/Input";
 import Card from "../../Components/Card/Card";
-import { getCityWeather } from "../../API/WetherAPIHelper";
-import DataFiletering from "../../Util/WeatherDataUtil";
+
 import "./Home.css";
 import { useState, useEffect } from "react";
-
-import CityList from "../../Data/cities.json";
-import Cookies from "js-cookie";
-import { WEATHER_COOKIE } from "../../Constant/CookiesConstant";
+import {
+  CACHE_EXPIRATION,
+  CACHE_TIME_KEY,
+} from "../../Constant/CookiesConstant";
+import { COLORS } from "../../Constant/IconConstant";
+import {
+  GetWeatherDataByAPI,
+  GetWeatherDataByCache,
+  GetCacheData,
+} from "../../Util/CacheHandlerUtil";
 
 function Home() {
-  const colors = ["bg-blue", "bg-green", "bg-red", "bg-purple", "bg-orange"];
-  const [WetherData, setWetherData] = useState([]);
+  const [WetherData, setWetherData] = useState(null);
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   let colorId = 0;
 
-  const FetchingData = async () => {
-    let cities = CityList.List.map((city) => city.CityCode).join(",");
-    const data = await getCityWeather(cities);
-    return DataFiletering(data);
+  const fetchData = async () => {
+    setIsLoaded(true);
+    let availableTime = CACHE_EXPIRATION;
+    let lastFetched =
+      GetCacheData(CACHE_TIME_KEY) || Date.now() + CACHE_EXPIRATION;
+    try {
+      if (!WetherData || Date.now() - lastFetched > CACHE_EXPIRATION) {
+        setWetherData(await GetWeatherDataByAPI());
+        availableTime = CACHE_EXPIRATION - (Date.now() - lastFetched);
+      } else {
+        setWetherData(await GetWeatherDataByCache());
+      }
+      setIsLoaded(false);
+    } catch (error) {
+      setError(error);
+    } finally {
+      setTimeout(fetchData, availableTime);
+    }
   };
 
   useEffect(() => {
-    let cityWeather = Cookies.get(WEATHER_COOKIE);
-    if (
-      cityWeather === undefined ||
-      cityWeather === null ||
-      cityWeather.length === 0
-    ) {
-      setIsLoaded(true);
-      FetchingData()
-        .then((data) => {
-          Cookies.set(WEATHER_COOKIE, JSON.stringify(data), {
-            expires: new Date(Date.now() + 5 * 60 * 1000),
-          });
-          setWetherData(data);
-          setIsLoaded(false);
-          return data;
-        })
-        .catch((data) => {
-          console.log("error", data);
-          setError(data);
-          setIsLoaded(false);
-        });
-    } else {
-      cityWeather = JSON.parse(cityWeather);
-      setWetherData(cityWeather);
-    }
+    fetchData();
   }, []);
 
   return (
@@ -67,11 +61,11 @@ function Home() {
           </div>
         )}
 
-        <div className="col-md-12 col-sm-12 col-lg-8">
+        <div className="col-md-12 col-sm-12 col-lg-10">
           <div className="row  justify-content-center align-items-center ">
             {WetherData &&
               WetherData.map((item, index) => {
-                if (colorId > colors.length - 1) {
+                if (colorId > COLORS.length - 1) {
                   colorId = 0;
                 }
                 return (
@@ -79,7 +73,7 @@ function Home() {
                     <Card
                       key={item.id}
                       WetherDetails={item}
-                      color={colors[colorId++]}
+                      color={COLORS[colorId++]}
                     />
                   </div>
                 );

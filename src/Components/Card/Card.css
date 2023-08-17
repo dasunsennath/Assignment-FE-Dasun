@@ -5,17 +5,23 @@
 .bg-black-light {
   background-color: #383b47;
 }
-
+.fs-0 {
+  font-size: calc(3rem + 0.5vw) !important;
+}
 .fs-6 {
-  font-size: 0.875rem !important;
+  font-size: 1rem !important;
+}
+
+.fs-footer {
+  font-size: calc(0.6rem + 0.3vw) !important;
 }
 
 .fs-7 {
-  font-size: 0.75rem !important;
+  font-size: 0.9rem !important;
 }
 
 .fs-8 {
-  font-size: 0.54rem !important;
+  font-size: calc(0.5rem + 0.3vw) !important;
 }
 
 .fw-bold {
@@ -28,12 +34,6 @@
 
 .h-40 {
   height: 40px !important;
-}
-
-.close {
-  position: relative;
-  left: 0.5rem;
-  bottom: 0.5rem;
 }
 
 .bg-orange {
@@ -69,10 +69,14 @@
     font-size: calc(1rem + 0.6vw) !important;
   }
   .fs-8 {
-    font-size: 0.4rem !important;
+    font-size: 0.5rem !important;
   }
   .fs-6 {
-    font-size: 0.4rem !important;
+    font-size: 0.6rem !important;
+  }
+
+  .fs-footer {
+    font-size: 0.6rem !important;
   }
 }
 
@@ -84,15 +88,22 @@
     font-size: 1rem !important;
   }
 
-  .fs-6 {
-    font-size: 0.4rem !important;
-  }
   .fs-7 {
     font-size: 0.6rem !important;
+  }
+  .fs-8 {
+    font-size: 0.4rem !important;
+  }
+
+  .fs-footer {
+    font-size: 0.45rem !important;
   }
 }
 
 @media (min-width: 990px) and (max-width: 1200px) {
+  .fs-0 {
+    font-size: calc(2rem + 0.4vw) !important;
+  }
   .fs-2 {
     font-size: calc(1.2rem + 0.6vw) !important;
   }
@@ -103,19 +114,26 @@
     font-size: 1rem !important;
   }
 
-  .fs-6 {
-    font-size: 0.7rem !important;
-  }
   .fs-7 {
     font-size: 0.65rem !important;
+  }
+  .fs-8 {
+    font-size: calc(0.45rem + 0.2vw) !important;
   }
 }
 
-@media (min-width: 500px) {
-  .fs-6 {
-    font-size: 0.7rem !important;
+@media screen and (max-width: 990px) {
+  .fs-8 {
+    font-size: calc(0.4rem + 0.2vw) !important;
   }
-  .fs-7 {
-    font-size: 0.65rem !important;
+  .fs-0 {
+    font-size: calc(2rem + 0.4vw) !important;
+  }
+  .fs-3 {
+    font-size: calc(0.9rem + 0.5vw) !important;
+  }
+
+  .fs-6 {
+    font-size: 0.8rem !important;
   }
 }

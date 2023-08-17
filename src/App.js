@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./Pages/Home/Home";
 import WeatherDetail from "./Pages/WeatherDetails/WeatherDeatil";
-import Logo from "./Assets/Logo/Logo.png"
+import Logo from "./Assets/Logo/Logo.png";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { APP_NAME, FOOTER_TEXT } from "./Constant/appInfo";
 function App() {
@@ -17,15 +17,14 @@ function App() {
           </div>
         </div>
       </header>
-     
-     
+
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path=":city" element={<WeatherDetail />} />
+          <Route path="/" index element={<Home />} />
+          <Route path="/weather" element={<WeatherDetail />} />
+          <Route path="*" element={ <h1>404 Page Not Found</h1> } />
         </Routes>
       </Router>
-      
 
       <footer className="footer">
         <div className="container">
@@ -37,5 +36,3 @@ function App() {
 }
 
 export default App;
-
-
